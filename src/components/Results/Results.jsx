@@ -6,7 +6,7 @@ import "./Results.scss";
 
 const Results = ({ items, handleClick }) => {
     return (
-        <Container className="bg-white">
+        <Container className="bg-white results-container">
             {items !== undefined && items.length > 0 &&
                 items.map((item) => {
                     const formattedDecimals = item.price.decimals !== 0 ? item.price.decimals.toString().padEnd(2, '0').slice(1) : '';

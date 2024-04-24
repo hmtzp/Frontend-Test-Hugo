@@ -5,7 +5,7 @@ import "./Breadcrumbs.scss";
 
 const Breadcrumbs = ({ info }) => {
   if (!Array.isArray(info) || info.length === 0) {
-    return null; // Si info no es un array o está vacío, no renderizar nada
+    return null;
   }
 
   return (

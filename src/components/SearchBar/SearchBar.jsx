@@ -44,7 +44,7 @@ const SearchBar = () => {
       const response = await axios.get(url);
       const data = response.data;
       const categoryCount = {};
-      const items = data.results.map(item => {
+      const items = data.results.slice(0, 4).map(item => {
         categoryCount[item.category_id] = (categoryCount[item.category_id] || 0) + 1;
         const elPrice = item.price;
         const integerPart = Math.floor(elPrice);
@@ -86,7 +86,9 @@ const SearchBar = () => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    navigate(`/search/${query}`);
+    if (query.trim() !== "") {
+      navigate(`/search/${query}`);
+    }
   };
 
   const handleClick = (itemId) => {
@@ -105,7 +107,7 @@ const SearchBar = () => {
               alt="Mercado Libre"
             />
           </Navbar.Brand>
-          <Form inline className='meli-search' onSubmit={handleSearch}>
+          <Form className='meli-search' onSubmit={handleSearch}>
             <InputGroup>
               <Form.Control
                 type="text"
