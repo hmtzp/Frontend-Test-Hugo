@@ -14,7 +14,7 @@ import axios from 'axios';
 const SearchBar = () => {
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]); // Modificar para ser compartido
+  const [results, setResults] = useState([]);
   const [theCategories, setTheCategories] = useState([]);
   const navigate = useNavigate();
   const params = useParams();
