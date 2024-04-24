@@ -1,0 +1,35 @@
+@import './../../scss/variables';
+
+.item {
+    border-bottom: 1px solid $light-gray;
+    .col-img {
+        img {
+            width: 100%;
+            max-width: 180px;
+            border-radius: 4px;
+        }
+        cursor: pointer;
+    }
+    .col-description {
+        .price-content {
+            padding-bottom: 32px;
+            .price {
+                font-size: 24px;
+                .final-price {
+                    margin: 0 4px;
+                }
+            }
+            .shipping {
+                img {
+                    width: 20px;
+                    margin-left: 4px;
+                }
+            }
+        }
+        .name {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+    
+}

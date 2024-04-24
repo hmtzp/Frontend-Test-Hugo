@@ -1,0 +1,26 @@
+@import './variables';
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+    background: $background-color;
+    .App {
+        padding: 0;
+    }
+}
+sup {
+    color: $gray;
+}
+.bg-meli {
+    background: $yelow;
+}
+.bg-white {
+    background: $white;
+}
+.meli-search {
+    width: 100%;
+    .nav-search-btn {
+        background: $background-color;
+        border: none;
+    }
+}
